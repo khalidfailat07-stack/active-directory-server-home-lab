@@ -31,9 +31,9 @@ When a user forgets their credentials or experiences account lockouts, perform a
    # Force user password change on next interactive login
    Set-ADUser -Identity $TargetUser -ChangePasswordAtLogon $true
 
-   #If an account becomes locked due to multiple invalid login attempts
-   Unlock-ADAccount -Identity $TargetUser
-
+   # If an account becomes locked due to multiple invalid login attempts
+   Unlock-ADAccount -Identity $TargetUser #
+   
 ## 3. Client Connectivity Troubleshooting
 When an an endpoint is unable to connect to the network.
 
