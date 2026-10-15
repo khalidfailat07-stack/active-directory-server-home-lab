@@ -19,8 +19,8 @@ Deployed and configured a production-ready Windows Server 2022 instance in Micro
 | **Operating System** | Windows Server 2022 Datacenter (x64 Gen2) |
 | **Security Architecture**| Trusted Launch (vTPM & Secure Boot Enabled) |
 | **Networking & Firewalls**| Azure VNet, Network Security Group (NSG) with restricted RDP access |
-<img width="900" height="500" alt="01-DC-VM-Creation-Specs" src="https://github.com/user-attachments/assets/22737d6c-a7dc-4a5f-992a-2b026db712fc" />
-<img width="900" height="500" alt="06-ClientVM-Created" src="https://github.com/user-attachments/assets/57edbae5-289f-476c-9025-74141513e4da" />
+<img width="500" height="250" alt="01-DC-VM-Creation-Specs" src="https://github.com/user-attachments/assets/22737d6c-a7dc-4a5f-992a-2b026db712fc" />
+<img width="500" height="250" alt="06-ClientVM-Created" src="https://github.com/user-attachments/assets/57edbae5-289f-476c-9025-74141513e4da" />
 
 
 ---
@@ -38,8 +38,8 @@ Deployed and configured a production-ready Windows Server 2022 instance in Micro
 - [X] Configure DNS Server roles, forwarders, and reverse lookup zones.
 - [X] Implement Organizational Unit (OU) structure following tier-based administrative models.
 - [X] Create and enforce Group Policy Objects (GPOs) for enterprise security baselines.
-<img width="1917" height="1198" alt="04-gpo-security-baseline png" src="https://github.com/user-attachments/assets/805c1515-fecd-463a-9c32-a6ecb2b5db96" />
-<img width="1917" height="1198" alt="09-Remote-Desktop-Policy-Creation" src="https://github.com/user-attachments/assets/68f0c488-a683-4a9e-82b0-5fbd9eec4ec0" />
+<img width="500" height="250" alt="04-gpo-security-baseline png" src="https://github.com/user-attachments/assets/805c1515-fecd-463a-9c32-a6ecb2b5db96" />
+<img width="500" height="250" alt="09-Remote-Desktop-Policy-Creation" src="https://github.com/user-attachments/assets/68f0c488-a683-4a9e-82b0-5fbd9eec4ec0" />
 
 ---
 
