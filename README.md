@@ -32,12 +32,12 @@ Deployed and configured a production-ready Windows Server 2022 instance in Micro
 - Configured Gen2 Trusted Launch infrastructure enforcing Secure Boot and virtual TPM.
 - Defined custom Network Security Group (NSG) rules to isolate management ports.
 
-### Phase 2: Active Directory & Network Services *(Upcoming/In Progress)*
-- [ ] Install and configure Active Directory Domain Services (AD DS).
-- [ ] Promote VM to Primary Domain Controller for domain `lab.local`.
-- [ ] Configure DNS Server roles, forwarders, and reverse lookup zones.
-- [ ] Implement Organizational Unit (OU) structure following tier-based administrative models.
-- [ ] Create and enforce Group Policy Objects (GPOs) for enterprise security baselines.
+### Phase 2: Active Directory & Network Services 
+- [X] Install and configure Active Directory Domain Services (AD DS).
+- [X] Promote VM to Primary Domain Controller for domain `lab.local`.
+- [X] Configure DNS Server roles, forwarders, and reverse lookup zones.
+- [X] Implement Organizational Unit (OU) structure following tier-based administrative models.
+- [X] Create and enforce Group Policy Objects (GPOs) for enterprise security baselines.
 <img width="1917" height="1198" alt="04-gpo-security-baseline png" src="https://github.com/user-attachments/assets/805c1515-fecd-463a-9c32-a6ecb2b5db96" />
 <img width="1917" height="1198" alt="09-Remote-Desktop-Policy-Creation" src="https://github.com/user-attachments/assets/68f0c488-a683-4a9e-82b0-5fbd9eec4ec0" />
 
