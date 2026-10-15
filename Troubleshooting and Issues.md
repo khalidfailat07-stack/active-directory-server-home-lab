@@ -1,1 +1,13 @@
+# Troubleshooting and Issues with Virtual Environments
 
+This document goes over some issues that occurred when setting up the virtual lab environment.
+I decided to use a virtual environment because of the lack of memory on my physical hardware.
+
+## Problem 1: Virtual Environment Set-up
+During the initial creation of my client and DC VMs, I made sure to place them in the same location, Sweden. However, I did not realize I had created them in different VNETs in the Sweden location, meaning they were logically separated. It was possible to create a link between them, but because this was at the very beginning of the deployment, I decided redeploying the client on the same VNET as the DC would be easier to deal with in the long run. 
+
+## Problem 2: Accidental Network Configuration Error
+During some testing with network configurations, I manually configured my DC's IP address, gateway, and DNS to test other configurations. This was before I had promoted my server to a DC, so there were low stakes to test things out. Unfortunately, setting configurations the traditional onsite way conflicted with Azure's SDN and DHCP infrastructure. I later learned that an APIPA address was assigned to my VM, probably because of the conflicting addresses from the azure DHCP and my manual assignment. Because of this, my VM was isolated from the infrastructure that allowed me to RDP into it, preventing me from connecting to it. I tried fixing the configurations through the Azure portal, but even though the changes seemed to be saved they were not actually pushed to the VM. After looking up the problem online, I learned about a form of out-of-band management called EMS, which doesnt use the TCP/IP stack. Using a serial console in Azure, I was able to open a command prompt channel and finally access the machine. I knew I had change the configuration to automatic, but I normally do that through settings, so I did some more looking to find the command for it. Finally, I was able to RDP into the VM and resolve the issue.
+
+##Problem 3: Remote User GPO and Legal Banner
+When deploying the client VM, unprivileged user accounts did not have remote access privileges. I decided to create a Restricted Group policy for remote connection to clients in the domain. Since I only had one client VM, I added most users into this group. However, I forgot to move the workstation from the built-in computers OU to the hierarchical OU I created which contained the computer policy. Once I verified remote access worked, I noticed one of my users didnt see the legal banner I configured upon connection to the workstation, even though all the other users did. 
